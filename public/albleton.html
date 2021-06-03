@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <style>
+:root {
+    --margin-horizontal: 3em;
+    font-family: futura-pt,Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header {
+    margin: 1.5em var(--margin-horizontal);
+}
+.header > * + * {
+    margin-left: 2em;
+}
+.header > span:nth-child(8)::after {
+    content: "+";
+}
+.try-live {
+    margin-left: auto; //push the last 3 elements to right side
+    text-decoration: none;
+}
+.footer {
+    padding: 5em;
+}
+.footer > * + * {
+    margin-top: 5em;
+}
+.footer > .title {
+    font-size: 5em;
+    font-weight: bold;
+}
+.footer > .body {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "social-network education sign-up"
+        "community distributors language-and-location";
+    row-gap: 3.5em;
+}
+.footer > .body > div:nth-child(1) {
+    grid-area: social-network;
+}
+.footer > .body > div:nth-child(2) {
+    grid-area: education;
+}
+.footer > .body > div:nth-child(3) {
+    grid-area: sign-up;
+}
+.footer > .body > div:nth-child(4) {
+    grid-area: community;
+}
+.footer > .body > div:nth-child(5) {
+    grid-area: distributors;
+}
+.footer > .body > div:nth-child(6) {
+    grid-area: language-and-location;
+}
+.footer > .body > div > div::after {
+    content: ">";
+}
+.footer > .body > div > :first-child:not(div) {
+    font-size: 1.3em;
+}
+.footer > .tail {
+    font-size: 1.3em;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.tail > *:nth-child(8) {
+    margin-left: auto;
+}
+.tail > * + * {
+    margin-left: 2em;
+}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <a href="/home">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="21px" viewBox="0 0 45 21" enable-background="new 0 0 45 21" xml:space="preserve">
+                    <g><rect width="3" height="21"></rect><rect x="6" width="3" height="21"></rect><rect x="12" width="3" height="21"></rect><rect x="18" width="3" height="21"></rect><g><rect x="24" y="18" width="21" height="3"></rect><rect x="24" y="12" width="21" height="3"></rect><rect x="24" y="6" width="21" height="3"></rect><rect x="24" width="21" height="3"></rect></g></g>
+                </svg>
+            </a>
+            <span>Live</span>
+            <span>Push</span>
+            <span>Link</span>
+            <span>Shop</span>
+            <span>Packs</span>
+            <span>Help</span>
+            <span>More</span>
+            <a href="" class="try-live">Try Live for free</a>
+            <span>Account</span>
+            <span>Log out</span>
+        </div>
+        <hr />
+        <div class="main">
+        </div>
+        <hr />
+        <div class="footer">
+            <div class="title">
+                Ableton
+            </div>
+            <div class="body">
+                <div>
+                    Education
+                    <div>Offsers for students and teachers</div>
+                    <div>Offers for institutions</div>
+                    <div>Push 1 trade-in initiative</div>
+                </div>
+                <div>
+                    Education
+                    <div>Offsers for students and teachers</div>
+                    <div>Offers for institutions</div>
+                    <div>Push 1 trade-in initiative</div>
+                </div>
+                <div>
+                    Education
+                    <div>Offsers for students and teachers</div>
+                    <div>Offers for institutions</div>
+                    <div>Push 1 trade-in initiative</div>
+                </div>
+                <div>
+                    Education
+                    <div>Offsers for students and teachers</div>
+                    <div>Offers for institutions</div>
+                    <div>Push 1 trade-in initiative</div>
+                </div>
+                <div>
+                    Education
+                    <div>Offsers for students and teachers</div>
+                    <div>Offers for institutions</div>
+                    <div>Push 1 trade-in initiative</div>
+                </div>
+                <div>
+                    Education
+                    <div>Offsers for students and teachers</div>
+                    <div>Offers for institutions</div>
+                    <div>Push 1 trade-in initiative</div>
+                </div>
+            </div>
+            <div class="tail">
+                <span>Archive</span>
+                <span>Contact Us</span>
+                <span>Press Resources</span>
+                <span>Legal Info</span>
+                <span>Privacy Policy</span>
+                <span>Cookie Settings</span>
+                <span>Imprint</span>
+                <span>Made in Berlin</span>
+                <a href="/home">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="45px" height="21px" viewBox="0 0 45 21" enable-background="new 0 0 45 21" xml:space="preserve">
+                        <g><rect width="3" height="21"></rect><rect x="6" width="3" height="21"></rect><rect x="12" width="3" height="21"></rect><rect x="18" width="3" height="21"></rect><g><rect x="24" y="18" width="21" height="3"></rect><rect x="24" y="12" width="21" height="3"></rect><rect x="24" y="6" width="21" height="3"></rect><rect x="24" width="21" height="3"></rect></g></g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
