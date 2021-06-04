@@ -3,8 +3,15 @@
         <style>
 :root {
     --margin-horizontal: 3em;
-    font-family: futura-pt,Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --url-ableton: url(https://ableton-production.imgix.net/about/header.jpg?auto=format&fit=crop&fm=jpg&h=888&ixjsv=1.1.3&w=1334);
+    --color-yellow: #fbffa7;
+    --color-orange: #ff764d;
+    --color-sky-blue: #b1c5ff;
+    --color-purple: #d5b3ff;
+    --color-green: #b6ffc0;
+    --color-blue: #0000ff;
 }
+
 .header {
     display: flex;
     flex-direction: row;
@@ -20,11 +27,38 @@
 }
 .header > span:nth-child(8)::after {
     content: "+";
+    margin-left: 0.3em;
 }
 .try-live {
-    margin-left: auto; //push the last 3 elements to right side
-    text-decoration: none;
+    /*push the last 3 elements to right side*/
+    margin-left: auto;
+    color: var(--color-blue);
 }
+
+.main > div:first-child {
+    padding-left: 3em;
+    margin-top: 2em;
+}
+.menu.active {
+    color: var(--color-orange);
+}
+div > .menu + .menu {
+    margin-left: 2em;
+}
+.banner {
+    width: 88vw;
+    height: 5em;
+    margin: 0.3em auto;
+
+    color: var(--color-orange);
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+
+    background-image: var(--url-ableton);
+    background-size: cover;
+}
+
 .footer {
     padding: 5em;
 }
@@ -62,25 +96,31 @@
 .footer > .body > div:nth-child(6) {
     grid-area: language-and-location;
 }
-.footer > .body > div > div::after {
-    content: ">";
+.footer > .body > div > * + * {
+    margin-top: 0.7em;
 }
-.footer > .body > div > :first-child:not(div) {
+.footer > .body > div > div:not(.head, .paragraph)::after {
+    content: ">";
+    margin-left: 0.3em;
+}
+.footer > .body > div > .head {
     font-size: 1.3em;
+    font-weight: bold;
 }
 .footer > .tail {
-    font-size: 1.3em;
+    font-size: 0.8em;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
 }
-.tail > *:nth-child(8) {
+.footer > .tail > *:nth-child(8) {
     margin-left: auto;
 }
-.tail > * + * {
-    margin-left: 2em;
+.footer > .tail > * + * {
+    margin-left: 1em;
 }
         </style>
     </head>
@@ -98,12 +138,28 @@
             <span>Packs</span>
             <span>Help</span>
             <span>More</span>
-            <a href="" class="try-live">Try Live for free</a>
+            <span class="try-live">Try Live for free</span>
             <span>Account</span>
             <span>Log out</span>
         </div>
         <hr />
         <div class="main">
+            <div>
+                <span class="menu active">
+                    About
+                </span>
+                <span class="menu">
+                    Jobs
+                </span>
+            </div>
+            <div class="banner">
+                Ableton
+            </div>
+            <h5>
+                We make Live, Push and Link - unique software and hardware for music creation and performance.
+                With these products, our community of users creates amazing things.
+            </h5>
+            ableton was founded in 1999 and released the first version of Live in 2001. Out products are used by a community of dedicated musicians, sound designers, and artists from across the world.
         </div>
         <hr />
         <div class="footer">
@@ -112,40 +168,55 @@
             </div>
             <div class="body">
                 <div>
-                    Education
+                    <div>Register Live or Push</div>
+                    <div>Abut Ableton</div>
+                    <div>Jobs</div>
+                </div>
+                <div>
+                    <div class="head">
+                        Education
+                    </div>
                     <div>Offsers for students and teachers</div>
                     <div>Offers for institutions</div>
                     <div>Push 1 trade-in initiative</div>
                 </div>
                 <div>
-                    Education
-                    <div>Offsers for students and teachers</div>
-                    <div>Offers for institutions</div>
-                    <div>Push 1 trade-in initiative</div>
+                    <div class="head">
+                        Sign up to our newsletter
+                    </div>
+                    <div class="paragraph">
+                        Enter your email address to stay up to date with the latest offers, toturials, downloads and more.
+                    </div>
+                    <input type="email" placeholder="Email Address" />
+                    <button>
+                        Sign up
+                    </button>
                 </div>
                 <div>
-                    Education
-                    <div>Offsers for students and teachers</div>
-                    <div>Offers for institutions</div>
-                    <div>Push 1 trade-in initiative</div>
+                    <div class="head">
+                        Community
+                    </div>
+                    <div>Find Ableton User Groups</div>
+                    <div>Find Certified Training</div>
+                    <div>Become a Certified Trainer</div>
                 </div>
                 <div>
-                    Education
-                    <div>Offsers for students and teachers</div>
-                    <div>Offers for institutions</div>
-                    <div>Push 1 trade-in initiative</div>
+                    <div class="head">
+                        Distributors
+                    </div>
+                    <div>Find Distributors</div>
+                    <div>Try Push in-store</div>
                 </div>
                 <div>
-                    Education
-                    <div>Offsers for students and teachers</div>
-                    <div>Offers for institutions</div>
-                    <div>Push 1 trade-in initiative</div>
-                </div>
-                <div>
-                    Education
-                    <div>Offsers for students and teachers</div>
-                    <div>Offers for institutions</div>
-                    <div>Push 1 trade-in initiative</div>
+                    <div class="head">
+                        Language and Location
+                    </div>
+                    <select>
+                        <option default> English </option>
+                    </select>
+                    <select>
+                        <option default> United States </option>
+                    </select>
                 </div>
             </div>
             <div class="tail">
